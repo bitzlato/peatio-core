@@ -33,7 +33,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "faraday_middleware", "~> 0.13.1"
   spec.add_dependency "faye", "~> 1.2"
   spec.add_dependency "jwt"
-  spec.add_dependency "mysql2"
   spec.add_dependency "prometheus-client"
   spec.add_dependency "thin"
 
