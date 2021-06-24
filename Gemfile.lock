@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    peatio (2.6.2)
+    peatio (2.6.4)
       activemodel (> 5.2, <= 6.0.0)
       amqp
       bunny
@@ -9,10 +9,9 @@ PATH
       em-synchrony (~> 1.0)
       em-websocket
       eventmachine
-      faraday_middleware (~> 0.13.1)
+      faraday_middleware (~> 1.0)
       faye (~> 1.2)
       jwt
-      mysql2
       prometheus-client
       thin
 
@@ -44,7 +43,7 @@ GEM
     coderay (1.1.3)
     concurrent-ruby (1.1.6)
     cookiejar (0.3.3)
-    daemons (1.3.1)
+    daemons (1.4.0)
     diff-lcs (1.3)
     docile (1.3.2)
     em-http-request (1.1.7)
@@ -59,17 +58,28 @@ GEM
       eventmachine
     em-synchrony (1.0.6)
       eventmachine (>= 1.0.0.beta.1)
-    em-websocket (0.5.1)
+    em-websocket (0.5.2)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     em-websocket-client (0.1.2)
       eventmachine
       websocket
     eventmachine (1.2.7)
-    faraday (0.17.3)
+    faraday (1.4.2)
+      faraday-em_http (~> 1.0)
+      faraday-em_synchrony (~> 1.0)
+      faraday-excon (~> 1.1)
+      faraday-net_http (~> 1.0)
+      faraday-net_http_persistent (~> 1.1)
       multipart-post (>= 1.2, < 3)
-    faraday_middleware (0.13.1)
-      faraday (>= 0.7.4, < 1.0)
+      ruby2_keywords (>= 0.0.4)
+    faraday-em_http (1.0.0)
+    faraday-em_synchrony (1.0.0)
+    faraday-excon (1.1.0)
+    faraday-net_http (1.0.1)
+    faraday-net_http_persistent (1.1.0)
+    faraday_middleware (1.0.0)
+      faraday (~> 1.0)
     faye (1.4.0)
       cookiejar (>= 0.3.0)
       em-http-request (>= 1.1.6)
@@ -78,7 +88,7 @@ GEM
       multi_json (>= 1.0.0)
       rack (>= 1.0.0)
       websocket-driver (>= 0.5.1)
-    faye-websocket (0.11.0)
+    faye-websocket (0.11.1)
       eventmachine (>= 0.12.0)
       websocket-driver (>= 0.5.1)
     http_parser.rb (0.6.0)
@@ -89,12 +99,11 @@ GEM
       reline (>= 0.0.1)
     jaro_winkler (1.5.4)
     json (2.3.0)
-    jwt (2.2.2)
+    jwt (2.2.3)
     method_source (1.0.0)
     minitest (5.14.1)
     multi_json (1.15.0)
     multipart-post (2.1.1)
-    mysql2 (0.5.3)
     parallel (1.19.1)
     parser (2.7.1.3)
       ast (~> 2.4.0)
@@ -146,6 +155,7 @@ GEM
       rack (>= 1.1)
       rubocop (>= 0.82.0)
     ruby-progressbar (1.10.1)
+    ruby2_keywords (0.0.4)
     simplecov (0.18.5)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -153,7 +163,7 @@ GEM
     simplecov-json (0.2.1)
       json
       simplecov
-    thin (1.7.2)
+    thin (1.8.1)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
       rack (>= 1, < 3)
@@ -162,7 +172,7 @@ GEM
       thread_safe (~> 0.1)
     unicode-display_width (1.7.0)
     websocket (1.2.8)
-    websocket-driver (0.7.3)
+    websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     zeitwerk (2.3.0)

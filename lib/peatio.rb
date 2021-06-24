@@ -3,7 +3,6 @@
 require "logger"
 require "json"
 require "base64"
-require "mysql2"
 require "bunny"
 require "eventmachine"
 require "em-websocket"
