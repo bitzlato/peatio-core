@@ -49,7 +49,7 @@ module Peatio::Auth
     #   signature.
     # @param private_key [OpenSSL::PKey::PKey] Optional private key that used
     #   only to encode new tokens.
-    def initialize(public_key, private_key = nil)
+    def initialize(public_key, private_key = nil, verify_options = {})
       @public_key = public_key
       @private_key = private_key
 
@@ -69,7 +69,7 @@ module Peatio::Auth
         iat_leeway: ENV["JWT_ISSUED_AT_LEEWAY"].yield_self { |n| n.to_i unless n.nil? },
         exp_leeway: ENV["JWT_EXPIRATION_LEEWAY"].yield_self { |n| n.to_i unless n.nil? },
         nbf_leeway: ENV["JWT_NOT_BEFORE_LEEWAY"].yield_self { |n| n.to_i unless n.nil? },
-      }.compact
+      }.compact.merge(verify_options)
 
       @encode_options = {
         algorithm: @verify_options[:algorithms].first,
